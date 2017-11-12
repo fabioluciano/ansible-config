@@ -1,0 +1,11 @@
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# A linha do ponto de montagem do efi varia de acordo com sua instalação
+UUID=D94A-92C7  /boot/efi       vfat    umask=0077      0       1
+/dev/mapper/hdd-slash /               ext4    errors=remount-ro 0       1
+/dev/mapper/m2-doc /mnt/doc        ext4    defaults        0       2
+/dev/mapper/hdd-srv /mnt/srv        ext4    defaults        0       2
+/dev/mapper/hdd-vdi /mnt/vdi        ext4    defaults        0       2
+/dev/mapper/hdd-opt /opt            ext4    defaults        0       2
+/dev/mapper/hdd-var /var            ext4    defaults        0       2
+/dev/mapper/hdd-swap none            swap    sw              0       0
+tmpfs  /tmp             tmpfs   size=1024m         0       0

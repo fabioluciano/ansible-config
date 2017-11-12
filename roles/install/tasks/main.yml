@@ -1,0 +1,4 @@
+- name: Inclue todos os ppas
+  include_vars:
+    dir: 'vars'
+    files_matching: 'ppa-*.yml'

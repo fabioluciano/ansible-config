@@ -1,0 +1,12 @@
+---
+git:
+  email: fabio@naoimporta.com
+  name: Fábio Luciano
+  editor: vim
+  browser: google-chrome
+
+workspaces:
+  - Navegação
+  - Desenvolvimento
+  - Design
+  - Virtualização
