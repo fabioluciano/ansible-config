@@ -1,0 +1,4 @@
+---
+repo: synapse-core/testing
+packages:
+  - synapse

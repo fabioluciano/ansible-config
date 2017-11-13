@@ -1,0 +1,4 @@
+---
+repo: qbittorrent-team/qbittorrent-stable
+packages:
+  - qbittorrent

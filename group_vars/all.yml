@@ -1,4 +1,8 @@
 ---
+include_repositories: true
+install_packages: true
+
+
 git:
   email: fabio@naoimporta.com
   name: Fábio Luciano
@@ -10,3 +14,5 @@ workspaces:
   - Desenvolvimento
   - Design
   - Virtualização
+
+global_packages: []

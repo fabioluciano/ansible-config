@@ -1,0 +1,6 @@
+---
+repo: atareao/atareao
+packages:
+  - touchpad-indicator
+  - calendar-indicator
+  - pomodoro-indicator 

@@ -1,0 +1,4 @@
+---
+repo: videolan/master-daily
+packages:
+   - vlc

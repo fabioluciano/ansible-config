@@ -1,0 +1,10 @@
+packages:
+  - faenza-icon-theme
+  - compiz
+  - compizconfig-settings-manager
+  - compiz-core
+  - compiz-plugins
+  - compiz-plugins-default
+  - compiz-plugins-extra
+  - compiz-plugins-main
+  - compiz-plugins-main-default

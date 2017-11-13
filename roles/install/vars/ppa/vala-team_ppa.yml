@@ -1,0 +1,4 @@
+---
+repo: vala-team/ppa
+packages:
+  - valac

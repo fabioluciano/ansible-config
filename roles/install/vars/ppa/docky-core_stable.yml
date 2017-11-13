@@ -1,0 +1,4 @@
+---
+repo: docky-core/stable
+packages:
+  - plank

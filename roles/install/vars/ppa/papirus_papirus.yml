@@ -1,0 +1,5 @@
+---
+repo: papirus/papirus
+packages:
+  - papirus-icon-theme
+  - libreoffice-style-papirus

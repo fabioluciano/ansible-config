@@ -1,0 +1,6 @@
+---
+repo: "deb http://repository.spotify.com stable non-free"
+keyserver: keyserver.ubuntu.com
+id: 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+packages:
+  - spotify-client

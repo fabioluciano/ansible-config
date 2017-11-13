@@ -1,0 +1,3 @@
+packages:
+ - mysql-workbench
+ - pgadmin3

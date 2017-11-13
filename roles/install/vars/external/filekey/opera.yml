@@ -1,0 +1,5 @@
+---
+repo: "deb https://deb.opera.com/opera-stable/ stable non-free"
+key: "https://deb.opera.com/archive.key"
+packages:
+  - opera-stable

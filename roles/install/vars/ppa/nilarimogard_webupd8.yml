@@ -1,0 +1,8 @@
+---
+repo: nilarimogard/webupd8
+packages:
+  - dockbarx
+  - dockbarx-themes-extra
+  -  xfce4-dockbarx-plugin
+  - telegram-purple
+  - pidgin-indicator

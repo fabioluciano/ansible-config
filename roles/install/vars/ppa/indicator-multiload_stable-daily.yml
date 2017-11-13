@@ -1,0 +1,3 @@
+repo: indicator-multiload/stable-daily
+packages:
+  - indicator-multiload

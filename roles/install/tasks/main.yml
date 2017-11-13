@@ -1,4 +1,53 @@
-- name: Inclue todos os ppas
-  include_vars:
-    dir: 'vars'
-    files_matching: 'ppa-*.yml'
+---
+- name: "Adiciona todos os repositórios por ppa configurados"
+  apt_repository:
+    repo: "ppa:{{ (lookup('file', item) | from_yaml).repo }}"
+    state: present
+    update_cache: false
+  with_fileglob:
+    - "vars/ppa/*"
+  when: include_repositories
+
+- name: "Adiciona todos as keys externas configurads"
+  apt_key:
+     url: "{{ (lookup('file', item) | from_yaml).key }}"
+     state: present
+  with_fileglob:
+    - "vars/external/filekey/*"
+  when: include_repositories
+
+- name: "Adiciona todos as keys externas configurads"
+  apt_key:
+    keyserver: "{{ (lookup('file', item) | from_yaml).keyserver }}"
+    id: "{{ (lookup('file', item) | from_yaml).id }}"
+  with_fileglob:
+    - "vars/external/keyserver/*"
+  when: include_repositories
+
+- name: "Adiciona todos os repositórios externos configurados"
+  apt_repository:
+     repo: "{{ (lookup('file', item) | from_yaml).repo }}"
+     state: present
+  with_fileglob:
+    - "vars/external/filekey/*"
+    - "vars/external/keyserver/*"
+  when: include_repositories
+
+- shell: echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
+
+- name: Atualiza a lista de repositórios e pacotes
+  apt:
+    upgrade: dist
+    update_cache: yes
+    cache_valid_time: 3600
+
+- set_fact: global_packages="{{ global_packages | from_yaml }} + {{ (lookup('file', item) | from_yaml).packages }}"
+  with_fileglob:
+    - "vars/internal/*.yml"
+    - "vars/ppa/*.yml"
+    - "vars/external/filekey/*.yml"
+    - "vars/external/keyserver/*.yml"
+  when: install_packages
+
+- apt: name="{{ item }}" state=present
+  with_items: "{{global_packages}}"
