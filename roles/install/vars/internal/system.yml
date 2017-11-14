@@ -28,6 +28,7 @@ packages:
   - ethtool
   - plank
   - bash-completion
+  - network-manager-pptp-gnome
   - pcmanfm
   - thunar-dropbox-plugin
   - ubuntu-restricted-extras
@@ -58,3 +59,4 @@ packages:
   - file-roller
   - remmina
   - guake
+  - nvidia-current

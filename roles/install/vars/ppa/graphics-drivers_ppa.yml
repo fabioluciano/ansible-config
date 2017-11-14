@@ -1,5 +1,0 @@
-repo: graphics-drivers/ppa
-packages:
-  - nvidia-381
-  - intel-microcode
-  - nvidia-settings
