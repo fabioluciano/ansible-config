@@ -33,7 +33,8 @@
     - "vars/external/keyserver/*"
   when: include_repositories
 
-- shell: echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
+- shell: "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections"
+- shell: "echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections"
 
 - name: Atualiza a lista de repositórios e pacotes
   apt:

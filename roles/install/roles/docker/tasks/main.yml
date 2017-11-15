@@ -1,0 +1,10 @@
+---
+- apt_key:
+    url: "https://download.docker.com/linux/ubuntu/gpg"
+    state: present
+
+- apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu zesty stable"
+    state: present
+    
+# - debug: msg="{{ get_virtualbox_license_hash }}"

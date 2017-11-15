@@ -1,3 +1,11 @@
 ---
 - name: Copia o arquivo gitconfig
-  template: src=gitconfig dest=/etc/gitconfig
+  template: src=gitconfig.j2 dest=/etc/gitconfig
+
+- shell: "xfconf-query -c xfce4-session -p /sessions/Failsafe/Client0_Command -t string -t string -s compiz -s ccp"
+
+- file: path="/home/{{ username }}/.config/compiz-1/compizconfig/" state=directory 
+
+- template: src="compiz.profile.j2" dest="/home/{{ username }}/.config/compiz-1/compizconfig/Default.ini" force=true
+
+- shell: "compiz --replace ccp & "

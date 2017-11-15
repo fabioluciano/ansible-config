@@ -2,12 +2,17 @@
 include_repositories: true
 install_packages: true
 
+username: fabioluciano
+
 
 git:
   email: fabio@naoimporta.com
   name: Fábio Luciano
   editor: vim
   browser: google-chrome
+
+zsh:
+  plugins: []
 
 workspaces:
   - Navegação

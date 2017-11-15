@@ -1,0 +1,14 @@
+---
+- apt_key:
+    url: "https://www.virtualbox.org/download/oracle_vbox_2016.asc"
+    state: present
+
+- apt_key:
+    url: "https://www.virtualbox.org/download/oracle_vbox.asc"
+    state: present
+
+- apt_repository:
+     repo: "deb http://download.virtualbox.org/virtualbox/debian zesty contrib"
+     state: present
+
+# - debug: msg="{{ get_virtualbox_license_hash }}"

@@ -59,4 +59,7 @@ packages:
   - file-roller
   - remmina
   - guake
-  - nvidia-current
+  - nvidia-384
+  - intel-microcode
+  - apt-transport-https
+  - ttf-mscorefonts-installer
