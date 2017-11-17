@@ -2,5 +2,5 @@
 - hosts: localhost
   gather_facts: Yes
   roles:
-    - { role: install, become: true }
+    # - { role: install, become: true }
     - configure

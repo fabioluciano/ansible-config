@@ -4,8 +4,14 @@
 
 - shell: "xfconf-query -c xfce4-session -p /sessions/Failsafe/Client0_Command -t string -t string -s compiz -s ccp"
 
-- file: path="/home/{{ username }}/.config/compiz-1/compizconfig/" state=directory 
+- file: path="/home/{{ username }}/.config/compiz-1/compizconfig/" state=directory
 
 - template: src="compiz.profile.j2" dest="/home/{{ username }}/.config/compiz-1/compizconfig/Default.ini" force=true
+#
+# - shell: "compiz --replace ccp & "
 
-- shell: "compiz --replace ccp & "
+- get_url:
+    url: "http://git.io/antigen"
+    dest: "/home/{{ username }}/.antigen.zsh"
+
+- copy: src=zshrc dest=/home/{{ username }}/.zshrc
